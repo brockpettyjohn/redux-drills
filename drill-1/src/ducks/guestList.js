@@ -1,5 +1,9 @@
+
 const initialState = []
 
-export default function reducer(state = initialState, action) {
-  return state;
+let reducer = (state = initialState, action) => {
+  return state
+
 }
+
+export default reducer;

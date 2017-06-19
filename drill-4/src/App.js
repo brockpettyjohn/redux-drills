@@ -26,7 +26,7 @@ class App extends Component {
       edit: true,
       guestToEdit: guest,
       guestIndex: i
-    })
+    }, ()=> console.log(this.state.guestToEdit))
   }
 
   handleInputChange(e) {
@@ -84,7 +84,11 @@ class App extends Component {
         </form>
         {
            this.state.edit ?
-                <EditGuest />
+                <EditGuest
+                 hide={this.hideModal}
+                 guest={this.state.guestToEdit}
+                 ind={this.state.guestIndex}
+                 />
                 : null
         }
       </div>
